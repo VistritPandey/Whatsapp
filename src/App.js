@@ -1,11 +1,12 @@
 import './App.css';
+import Chat from './Chat';
 import Sidebar from './Sidebar.js'
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello darkness my old friend</h1>
       <Sidebar />
+      <Chat />
     </div>
   );
 }
