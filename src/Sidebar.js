@@ -1,6 +1,6 @@
 import React from 'react'
 import './Sidebar.css'
-import DonutLargeIcon from "@material-ui/icons/DonutLarge"
+import AddCircleOutlineSharpIcon from '@material-ui/icons/AddCircleOutlineSharp';
 import MoreVertIcon from "@material-ui/icons/MoreVert"
 import ChatIcon from "@material-ui/icons/Chat"
 import SearchOutlined from "@material-ui/icons/SearchOutlined"
@@ -14,7 +14,7 @@ function Sidebar() {
                 <Avatar />
                 <div className="sidebar__headerRight">
                 <IconButton>
-                    <DonutLargeIcon />
+                    <AddCircleOutlineSharpIcon />
                 </IconButton>
                 <IconButton>
                     <ChatIcon />
