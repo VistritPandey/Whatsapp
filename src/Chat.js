@@ -1,9 +1,12 @@
+import { Avatar } from '@material-ui/core'
 import React from 'react'
 
 function Chat() {
     return (
         <div className='chat'>
-            <h1>I am the chat section</h1>
+            <div className="chat__header">
+                <Avatar />
+            </div>
         </div>
     )
 }
