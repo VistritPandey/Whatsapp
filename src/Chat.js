@@ -29,10 +29,15 @@ function Chat() {
             <div className="chat__body">
                 <p>
                     <span className="chat__name">Vistrit</span>
+                      message goes here
+                      <span className="chat__timestamp">
+                        { new Date().toUTCString()}
+                      </span>
                 </p>
             </div>
         </div>
     )
 }
+//message.timestamp?.toDate()
 
 export default Chat
