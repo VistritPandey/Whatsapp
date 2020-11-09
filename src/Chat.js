@@ -17,17 +17,17 @@ function Chat() {
 
     const sendMessage = (e) => {
         e.preventDefault();
-        console.log(input)
+        console.log(input);
+        setInput("");
     }
 
     const [input, setInput] = useState("");
     return (
         <div className='chat'>
             <div className="chat__header">
-                <Avatar src={`https://avatars.dicebear.com/api/:sprites/:seed.svg`}/>
+                <Avatar src={`https://avatars.dicebear.com/api/human/$seed.svg`}/>
                 <div className="chat__headerInfo">
                     <h3>Room Name</h3>
-                    <p>Lat seen at.....</p>
                 </div>
                 <div className="chat__headerRight">
                     <IconButton>

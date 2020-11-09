@@ -1,11 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Sidebar.css'
 import AddCircleOutlineSharpIcon from '@material-ui/icons/AddCircleOutlineSharp';
 import SearchOutlined from "@material-ui/icons/SearchOutlined"
 import { Avatar, IconButton } from '@material-ui/core'
 import SidebarChat from './SidebarChat'
+import db from "./firebase"
 
 function Sidebar() {
+    const [rooms, setRooms ] = useState([]);
+
+    useEffect(()=> {
+        db.collection('rooms').onSnapshot((snapshot) => 
+            setRooms(
+                snapshot.docs.map((doc)=> ({
+                    id: doc.id,
+                    data: doc.data(),
+                }))
+            )
+        );
+    }, []);
+
     return (
         <div className='sidebar'>
             <div className="sidebar__header">
