@@ -8,7 +8,12 @@ import db from "./firebase"
 
 function Sidebar() {
     const [rooms, setRooms ] = useState([]);
+    const [seed, setSeed] = useState("");
 
+    useEffect(() => {
+        setSeed(Math.floor(Math.random()* 5000));
+    }, []);
+    
     useEffect(()=> {
         db.collection('rooms').onSnapshot((snapshot) => 
             setRooms(
@@ -23,7 +28,7 @@ function Sidebar() {
     return (
         <div className='sidebar'>
             <div className="sidebar__header">
-                <Avatar />
+                <Avatar src={`https://avatars.dicebear.com/api/human/$seed.svg`}/>
                 <div className="sidebar__headerRight">
                 <IconButton>
                     <AddCircleOutlineSharpIcon />
@@ -39,6 +44,10 @@ function Sidebar() {
             </div>
             <div className="sidebar__chats">
                 <SidebarChat />
+                {rooms.map(room =>(
+                    <SidebarChat key={room.id} id ={room.id}
+                    name = {room.data.name} />
+                ))}
             </div>
         </div>
     )
