@@ -60,3 +60,11 @@
     font-weight: 800;
     font-size: xx-small;
 }
+
+.chat__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+    border-top: 1px solid lightgray;
+}

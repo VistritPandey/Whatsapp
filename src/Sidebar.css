@@ -12,14 +12,14 @@
 }
 
 .sidebar__headerRight {
+    align-items: flex-end;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     min-width: 10vw;
 }
 
 .sidebar__headerRight > .MuiSvgIcon-root {
-    margin-right: 2vw;
+    align-content: flex-end;
     font-size: 24px !important;
 }
 

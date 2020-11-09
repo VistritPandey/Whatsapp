@@ -1,8 +1,6 @@
 import React from 'react'
 import './Sidebar.css'
 import AddCircleOutlineSharpIcon from '@material-ui/icons/AddCircleOutlineSharp';
-import MoreVertIcon from "@material-ui/icons/MoreVert"
-import ChatIcon from "@material-ui/icons/Chat"
 import SearchOutlined from "@material-ui/icons/SearchOutlined"
 import { Avatar, IconButton } from '@material-ui/core'
 import SidebarChat from './SidebarChat'
@@ -16,12 +14,7 @@ function Sidebar() {
                 <IconButton>
                     <AddCircleOutlineSharpIcon />
                 </IconButton>
-                <IconButton>
-                    <ChatIcon />
-                </IconButton>
-                <IconButton>
-                    <MoreVertIcon />
-                </IconButton>
+                
                 </div>
             </div>
             <div className="sidebar__search">
