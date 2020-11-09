@@ -1,0 +1,10 @@
+value={input}
+onChange={(e) => setInput(e.target.value)}
+                        
+
+
+onClick={sendMessage}
+
+
+
+message.timestamp?.toDate()
