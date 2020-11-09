@@ -16,7 +16,8 @@ function Chat() {
     }, []);
 
     const sendMessage = (e) => {
-
+        e.preventDefault();
+        console.log(input)
     }
 
     const [input, setInput] = useState("");
