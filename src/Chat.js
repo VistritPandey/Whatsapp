@@ -3,6 +3,7 @@ import React from 'react'
 import MoreVert from "@material-ui/icons/MoreVert"
 import AttachFile from "@material-ui/icons/AttachFile"
 import SearchOutlined from "@material-ui/icons/SearchOutlined"
+import './Chat.css'
 
 function Chat() {
     return (
@@ -24,6 +25,11 @@ function Chat() {
                         <MoreVert />
                     </IconButton>
                 </div>
+            </div>
+            <div className="chat__body">
+                <p>
+                    <span className="chat__name">Vistrit</span>
+                </p>
             </div>
         </div>
     )
