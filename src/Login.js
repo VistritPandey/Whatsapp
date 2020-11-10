@@ -24,7 +24,6 @@ function Login() {
   return (
     <div className="login">
       <div className="login__container">
-        <img src="WhatsApp.svg" alt="ws logo" />
         <div className="login__text">
           <h1>WhatsApp-Clone</h1>
         </div>

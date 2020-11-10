@@ -24,9 +24,6 @@ function App() {
               </Route>
               <Route path="/">
                 <div className="app__body-emptyChat">
-                  <img src="WhatsApp.svg" alt="ws logo" />
-
-                  
                 </div>
               </Route>
             </Switch>
