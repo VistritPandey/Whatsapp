@@ -6,9 +6,11 @@ import SearchOutlined from "@material-ui/icons/SearchOutlined"
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon"
 import MicIcon from "@material-ui/icons/Mic"
 import './Chat.css'
+import { useParams } from "react-router-dom"
 
 function Chat() {
 
+    const {roomId } = useParams();
     const [seed, setSeed] = useState("");
 
     useEffect(() => {
