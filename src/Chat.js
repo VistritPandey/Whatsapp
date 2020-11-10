@@ -37,7 +37,6 @@ function Chat() {
           setMessages(snapshot.docs.map((doc) => doc.data()))
         );
     }
-    // console.log(messages);
     return () => {};
   }, [roomId]);
 
@@ -47,9 +46,8 @@ function Chat() {
 
   const sendMessage = (e) => {
     e.preventDefault();
-    console.log("You typed >>>", input);
 
-    db.collection("rooms").doc(roomId).collection("messages").add({
+    db.collection('rooms').doc(roomId).collection('messages').add({
       message: input,
       name: user.displayName,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
@@ -63,12 +61,6 @@ function Chat() {
         <Avatar src={`https://avatars.dicebear.com/api/human/${roomId}.svg`} />
         <div className="chat__headerInfo">
           <h3>{roomName}</h3>
-          <p>
-            Last seen at{" "}
-            {new Date(
-              messages[messages.length - 1]?.timestamp?.toDate()
-            ).toUTCString()}
-          </p>
         </div>
         <div className="chat__headerRight">
           <IconButton>
@@ -84,11 +76,9 @@ function Chat() {
       </div>
       <div className="chat__body">
         {messages.map((message) => (
-          <p
-            className={`chat__message ${
+          <p className={`chat__message ${
               message.name === user.displayName && "chat__receiver"
-            }`}
-          >
+            }`}>
             <span className="chat__name">{message.name}</span>
             {message.message}
             <span className="chat__timestamp">
