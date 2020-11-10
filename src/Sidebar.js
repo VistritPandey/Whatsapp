@@ -1,7 +1,5 @@
 import { Avatar, IconButton } from "@material-ui/core";
-import DonutLargeIcon from "@material-ui/icons/DonutLarge";
-import ChatIcon from "@material-ui/icons/Chat";
-import MoreVertIcon from "@material-ui/icons/MoreVert";
+import VoiceChatIcon from "@material-ui/icons/VoiceChat";
 import React, { useEffect, useState } from "react";
 import "./Sidebar.css";
 import { SearchOutlined } from "@material-ui/icons";
@@ -34,15 +32,10 @@ function Sidebar() {
         <Avatar src={user?.photoURL}/>
         <div className="sidebar__headerRight">
           <IconButton>
-            <DonutLargeIcon />
+            <a href="https://aqueous-plains-97236.herokuapp.com/" target="_blank">
+              <VoiceChatIcon/>          
+            </a>
           </IconButton>
-          <IconButton>
-            <ChatIcon />
-          </IconButton>
-          <IconButton>
-            <MoreVertIcon />
-          </IconButton>
-        </div>
       </div>
       <div className="sidebar__search">
         <div className="sidebar__searchContainer">
