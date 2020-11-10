@@ -19,7 +19,7 @@ function Chat() {
   const { roomId } = useParams();
   const [roomName, setRoomName] = useState("");
   const [messages, setMessages] = useState([]);
-  const [{ user }, dispatch] = useStateValue();
+  const [ user, dispatch] = useStateValue();
 
   useEffect(() => {
     if (roomId) {
@@ -85,7 +85,6 @@ function Chat() {
       <div className="chat__body">
         {messages.map((message) => (
           <p
-            // key={message.id}
             className={`chat__message ${
               message.name === user.displayName && "chat__receiver"
             }`}

@@ -1,24 +1,38 @@
-import './App.css';
-import Chat from './Chat';
-import Sidebar from './Sidebar.js'
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import React from "react";
+import { Route, BrowserRouter, Switch } from "react-router-dom";
+import "./App.css";
+import Chat from "./Chat";
+import Login from "./Login";
+import Sidebar from "./Sidebar";
+import { useStateValue } from "./StateProvider";
 
 function App() {
+  const [{ user }, dispatch] = useStateValue();
+
   return (
-    <div className="App">
-      <div className="app__body">
-        <Router>
-          <Switch>
+    // BEM naming convention
+    <div className="app">
+      {!user ? (
+        <Login />
+      ) : (
+        <div className="app__body">
+          <BrowserRouter>
             <Sidebar />
+            <Switch>
               <Route path="/rooms/:roomId">
                 <Chat />
               </Route>
-              <Route path ="/">
-                <Chat />
+              <Route path="/">
+                <div className="app__body-emptyChat">
+                  <img src="WhatsApp.svg" alt="ws logo" />
+
+                  
+                </div>
               </Route>
-          </Switch>
-        </Router>
-      </div>
+            </Switch>
+          </BrowserRouter>
+        </div>
+      )}
     </div>
   );
 }
