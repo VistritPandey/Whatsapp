@@ -1,5 +1,7 @@
 # Deployed at: https://vistrit-whatsapp.web.app
 
+It also has video-calling feature
+
 
 ## Available Scripts
 
