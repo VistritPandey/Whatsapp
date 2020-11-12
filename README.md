@@ -1,6 +1,6 @@
 # Deployed at: https://vistrit-whatsapp.web.app
 
-It also has video-calling feature
+It also has video-calling feature(a link directed to the zoom clone, I made earlier. One clicking it, it pops up in a different tab. Every time you click on it, a new room is created. If you want to invite people to your room, just share your link with them, irrespective of whether they use the chat application or not
 
 
 ## Available Scripts
