@@ -37,6 +37,7 @@ function Sidebar() {
             </a>
           </IconButton>
       </div>
+    </div>
       <div className="sidebar__search">
         <div className="sidebar__searchContainer">
           <SearchOutlined />
